@@ -15,12 +15,12 @@ export default class ReactNativeChip extends React.PureComponent {
   }
 
   render() {
-    const { iconStyle, onClose, style, text } = this.props;
+    const { iconStyle, onClose, style, text, textStyle } = this.props;
 
     return (
       <View style={[styles.root, style]}>
         <View style={styles.container}>
-          <Text style={styles.text} numberOfLines={1}>{text}</Text>
+          <Text style={[styles.text, textStyle]} numberOfLines={1}>{text}</Text>
           <TouchableOpacity
             style={[styles.iconWrapper, iconStyle]}
             onPress={onClose}>
